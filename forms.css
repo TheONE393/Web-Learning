@@ -1,0 +1,37 @@
+body {
+    counter-reset: section;
+}
+input[type=text] {
+    /* width: 100%; */
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(194, 14, 14);
+    border-top: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(237, 229, 229);
+    font-size: large;
+    transition: width 0.4s ease-in-out;
+}
+/* form::before {
+    counter-increment: section;
+    content: "Section" counter(section)":";
+} */
+input[type=text]:focus {
+    width: 100%;
+    background-color: rgba(114, 181, 189, 0.503);
+}
+select {
+    width: 100px;
+    border: 1px solid orange;
+    background-color: orangered;
+}
+input[type=reset] {
+    width: 100px;
+    margin: 8px 8px;
+    background-color: crimson;
+}
+input[type=submit] {
+    width: 100px;
+    margin: 8px 8px;
+    background-color: red;
+}
