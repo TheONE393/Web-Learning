@@ -5,24 +5,35 @@ body {
     padding: 10px;
     background-color: rgb(169, 159, 159);
 }
+
 .header {
     width: inherit;
     text-align: center;
-    background-color: white;
-    /* height: 180px; */
+    background: url('Images/Marvel.jpg') no-repeat center;
+    /* background-position: center; */
+    background-size: cover;
     padding: 15px;
+    background-origin: border-boxs;
 }
 .header h1 {
     font-size: 50px;
+    font-family: cursive;
+    color: darkcyan;
+    opacity: 0.5;
 }
 .header p {
     font-size: 20px;
+    color: rgb(16, 190, 54);
+    opacity: 0.8;
 }
+
 
 .nav {
     overflow: hidden;
     background-color: rgb(55, 53, 53);
     /* padding: 8px; */
+    position: sticky;
+    top: 0;
 }
 .nav a {
     display: block;
@@ -47,9 +58,10 @@ a:visited {
     color: white;
 }
 
+
 img {
     width: 100%;
-    padding: 2px;
+    padding: 20px;
     margin: auto;
 }
 .content {
@@ -62,18 +74,22 @@ img {
     background-color: white;
 
 }
+.row p {
+    padding: 14px;
+}
 .main {
     float: left;
     width: 75%;
     padding-left: 10px;
     padding-right: 10px;
+    
 }
 .side {
     float: left;
     width: 25%;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgb(169, 159, 159);
+    /* background-image: conic-gradient(center, black, white); */
 }
 .row {
     height: fit-content;
@@ -90,14 +106,51 @@ img {
     padding-left: 20px ;
     /* opacity: 0.9;
 } */
+ .row address {
+    padding: 14px;
+ }
 .card {
- margin-top: 10px; 
- background-color: rgb(81, 164, 132);  
+    display: block;
+    border-radius: 15px 50px;
+    margin-top: 20px; 
+    background-image: radial-gradient(circle, red, pink, blue);
+    box-shadow:10px 10px 15px 5px rgb(0, 0, 0);
 }
-
+#overlapping {
+    width: 99%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    margin: 0;
+}
+#overlapping:hover {
+    overflow: visible;
+}
+.transform{
+    font-size: 20px;
+    color: green;
+    display: block;
+    padding: 10px;
+    transition: transform 5s;
+    /* transition-duration: 2s; */
+    transition-timing-function: ease-in-out;
+    text-align: center;
+}
+@keyframes example {
+    0% {color: black;}
+    25% {color: pink;}
+    50% {color: red;}
+    75% {color: yellow;}
+    100% {color: green;}
+}
+.transform:hover {
+    transform: scale(2,2);
+    animation-name: example;
+    animation-duration: 5s;
+}
 .footer {
     width: inherit;
-    background-color: rgb(46, 45, 45);
+    background-image: linear-gradient(270deg, red, pink);
     text-align: center;
     padding: 8px;
     color: pink;
@@ -108,6 +161,7 @@ img {
         text-align: right;
     }   
 }
+
 
 @media screen and (max-width:600px) {
     .nav a {
