@@ -3,6 +3,7 @@
 }
 body {
     padding: 10px;
+    transition-duration: 0.4s;
     background-color: rgb(169, 159, 159);
 }
 
@@ -26,7 +27,13 @@ body {
     color: rgb(16, 190, 54);
     opacity: 0.8;
 }
-
+.mask1 {
+    /* -webkit-mask-image: url('Images/Marvel.jpg') ; */
+    /* mask-image: radial-gradient(ellipse, black 50%, rgba(19, 26, 20, 0.044) 50%); */
+    mask-position: center;
+    mask-repeat: no-repeat;
+    /* -webkit-mask-repeat: no-repeat; */
+}
 
 .nav {
     overflow: hidden;
@@ -40,6 +47,7 @@ body {
     float: left;
     text-decoration: none;
     padding: 14px 16px;
+    transition-duration: 1s;
     text-align: center;
     /* margin: 1px; */
     /* border: 1px solid white; */
@@ -63,6 +71,10 @@ img {
     width: 100%;
     padding: 20px;
     margin: auto;
+    /* filter: */
+}
+.side img {
+    border-radius: 50%;
 }
 .content {
     h1 {
@@ -72,6 +84,9 @@ img {
         padding: 10px;
     }
     background-color: white;
+    column-count: 2;
+    column-rule: solid;
+    column-rule-width: 2px;
 
 }
 .row p {
@@ -112,8 +127,11 @@ img {
 .card {
     display: block;
     border-radius: 15px 50px;
-    margin-top: 20px; 
+    margin-top: 20px;
+    transition-duration: 0.6s; 
     background-image: radial-gradient(circle, red, pink, blue);
+}
+.card:hover{
     box-shadow:10px 10px 15px 5px rgb(0, 0, 0);
 }
 #overlapping {
@@ -147,6 +165,7 @@ img {
     transform: scale(2,2);
     animation-name: example;
     animation-duration: 5s;
+    animation-fill-mode: both;
 }
 .footer {
     width: inherit;
